@@ -1,7 +1,14 @@
 import "./style/index.scss";
+import { sendRequest } from "./sendRequest";
 
-fetch("http://localhost:8080/users/1", {
-  method: "GET",
-})
-  .then((response) => response.json())
-  .then((content) => console.log(content));
+const url = window.location.href;
+const id = url.split("users/")[1];
+
+const onOrderChange = async () => {
+  const user = await sendRequest(id);
+  document.getElementById("name").innerHTML = user.name;
+  document.getElementById("age").innerHTML = user.age;
+  document.getElementById("description").innerHTML = user.description;
+};
+
+onOrderChange();
