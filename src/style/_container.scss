@@ -1,8 +1,24 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: $gray-light;
+  padding-left: 20px;
 
   h2 {
     color: $primary-color;
+  }
+
+  p {
+    margin-top: -2px;
+    font-size: 15px;
+  }
+
+  ul {
+    display: flex;
+    > li {
+      margin-right: 100px;
+    }
   }
 }
