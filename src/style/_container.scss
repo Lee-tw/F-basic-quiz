@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: $primary-color;
+  }
+}
