@@ -17,8 +17,28 @@
 
   ul {
     display: flex;
+    margin-bottom: 20px;
     > li {
-      margin-right: 100px;
+      &:nth-child(1)  {
+        flex-basis: 150px;
+      }
+      &:last-child {
+        margin-right: 30px;
+      }
+      width: 100%;
+      > div {
+        &:nth-child(1) {
+          font-weight: bold;
+          font-size: 15px;
+          padding-bottom: 5px;
+        }
+        &:last-child {
+          padding-bottom: 5px;
+        }
+        background-color: rgba(61, 84, 102, 0.1);
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
   }
 }

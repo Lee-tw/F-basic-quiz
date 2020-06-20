@@ -13,15 +13,16 @@ const getUserInfo = async () => {
 
 const getUserEducations = async () => {
   const educations = await sendRequestForEducations(id);
-  console.log(educations);
-  // const container = document.getElementById("container");
-  // for (var i = 0; i < educations.length; i++) {
-  //   if (i === 0) {
-  //     container.innerHTML += '<ul><li>' + educations[i] + '</li></ul>';
-  //   } else {
-  //     container.childNodes[0].innerHTML += '<li>' + educations[i] + '</li>';
-  //   }
-  // }
+  const container = document.getElementById("list");
+  for (var i = 0; i < educations.length; i++) {
+    container.innerHTML += "<ul>" +
+        "<li>" + educations[i].year + "</li>" +
+        "<li>" +
+        "<div>" + educations[i].title + "</div>" +
+        "<div>" + educations[i].description + "</div>" +
+        "</li>" +
+        "</ul>";
+  }
 };
 
 getUserInfo();
