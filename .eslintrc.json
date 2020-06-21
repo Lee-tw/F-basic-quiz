@@ -16,7 +16,9 @@
     "jest/expect-expect": "error",
     "jest/valid-describe": "error",
     "jest/no-focused-tests": "warn",
-    "import/prefer-default-export": "warn"
+    "import/prefer-default-export": "warn",
+    "no-plusplus": "off",
+    "prefer-template": "off"
   },
   "env": {
     "es6": true,

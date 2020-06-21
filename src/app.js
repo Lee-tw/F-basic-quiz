@@ -9,19 +9,27 @@ const getUserInfo = async () => {
   document.getElementById("name").innerHTML = user.name;
   document.getElementById("age").innerHTML = user.age;
   document.getElementById("description").innerHTML = user.description;
+  document.getElementById("image").src = user.avatar;
 };
 
 const getUserEducations = async () => {
   const educations = await sendRequestForEducations(id);
   const container = document.getElementById("list");
-  for (var i = 0; i < educations.length; i++) {
-    container.innerHTML += "<ul>" +
-        "<li>" + educations[i].year + "</li>" +
-        "<li>" +
-        "<div>" + educations[i].title + "</div>" +
-        "<div>" + educations[i].description + "</div>" +
-        "</li>" +
-        "</ul>";
+  for (let i = 0; i < educations.length; i++) {
+    container.innerHTML +=
+      "<ul>" +
+      "<li>" +
+      educations[i].year +
+      "</li>" +
+      "<li>" +
+      "<div>" +
+      educations[i].title +
+      "</div>" +
+      "<div>" +
+      educations[i].description +
+      "</div>" +
+      "</li>" +
+      "</ul>";
   }
 };
 
